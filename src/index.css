@@ -1,0 +1,53 @@
+.container {
+  height: 800px;
+  background-color: grey;
+  display: grid;
+  grid-template-areas:  "head head head head"
+                        "cont cont cont rp"
+                        "lp lp lp rp"
+                        "foot foot foot rp"
+                          ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+}
+.item {
+  border: 1px solid black;
+  background-color: green;
+}
+
+.header {
+  display: grid;
+  grid-area: head;
+  grid-template-areas:  "hh hh hh"
+                        "hc hc hf"
+                        "hc hc hf";
+  grid-template-columns: repeat(1fr);
+  grid-template-rows:repeat(1fr);
+}
+
+.headerHeader {
+  grid-area: hh
+}
+.headerContent {
+  grid-area: hc
+}
+.headerFooter {
+  grid-area: hf
+}
+
+.content {
+  grid-area: cont;
+}
+
+.footer {
+  grid-area: foot;
+}
+
+.leftPane {
+  grid-area: lp;
+}
+
+.rightPane {
+  grid-area: rp;
+}
